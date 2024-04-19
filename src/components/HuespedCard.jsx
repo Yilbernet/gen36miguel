@@ -3,16 +3,12 @@ import useFetch from '../hooks/useFetch'
 import "./styles/huespedCard.css"
 
 const HuespedCard = ({ url }) => {
-    //console.log(url)
+
     const [residente, obtenerResidente] = useFetch();
     useEffect(() => {
-
-
-        return () => {
-            obtenerResidente(url)
-        }
+        obtenerResidente(url)
     }, [])
-    console.log(residente)
+
     return (
         <article className='residente'>
             <figure className='residente__img'>
